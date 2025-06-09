@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #F8F9FA;
+        }
+
+        header {
+            background-color: #2B2D42;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #8D99AE;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-card {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .sports-section {
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            background-color: #2B2D42;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sports Hub</h1>
+        <p>Your Ultimate Sports Destination</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#products">პროდუქტები</a></li>
+            <li><a href="#equipment">აღჭურვილობა</a></li>
+            <li><a href="#events">ღონისძიებები</a></li>
+            <li><a href="#news">სიახლეები</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="sports-section">
+            <h2>სპორტული პროდუქცია</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <h3>სავარჯიშო მასალები</h3>
+                    <p>მაღალი ხარისხის სავარჯიშო აღჭურვილობა</p>
+                </div>
+                <div class="product-card">
+                    <h3>ჩაფხუტები</h3>
+                    <p>უსაფრთხო და კომფორტული ჩაფხუტები</p>
+                </div>
+                <div class="product-card">
+                    <h3>სპორტული ფეხსაცმელი</h3>
+                    <p>პროფესიონალური სპორტული ფეხსაცმელი</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sports-section">
+            <h2>სპორტის სახეობები</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <h3>ფეხბურთი</h3>
+                    <p>ყველაფერი ფეხბურთის შესახებ</p>
+                </div>
+                <div class="product-card">
+                    <h3>კალათბურთი</h3>
+                    <p>კალათბურთის აღჭურვილობა და სიახლეები</p>
+                </div>
+                <div class="product-card">
+                    <h3>ჭიდაობა</h3>
+                    <p>ჭიდაობის აღჭურვილობა და ტურნირები</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>საკონტაქტო ინფორმაცია</h3>
+        <p>ტელეფონი: +995 555 12 34 56</p>
+        <p>მისამართი: თბილისი, საქართველო</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>

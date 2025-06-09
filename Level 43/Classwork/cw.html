@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styles with :root</title>
+    <style>
+        :root {
+            --color1: #ff6b6b;
+            --color2: #4ecdc4;
+            --color3: #45b7d1;
+            --bg1: #2c3e50;
+            --bg2: #34495e;
+            --bg3: #2980b9;
+        }
+
+        .element1 {
+            color: var(--color1);
+            background-color: var(--bg1);
+            font-size: 24px;
+            letter-spacing: 2px;
+            display: inline;
+            padding: 15px;
+            margin: 10px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .element2 {
+            color: var(--color2);
+            background-color: var(--bg2);
+            font-size: 30px;
+            letter-spacing: 3px;
+            display: block;
+            padding: 20px;
+            margin: 15px;
+            position: relative;
+            transform: translateX(20px);
+            transition: transform 0.5s ease;
+        }
+
+        .element3 {
+            color: var(--color3);
+            background-color: var(--bg3);
+            font-size: 28px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 25px;
+            margin: 20px;
+            position: relative;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .element3:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="element1">First Element</div>
+    <div class="element2">Second Element</div>
+    <div class="element3">Third Element</div>
+</body>
+</html>

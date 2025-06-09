@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Booking</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            width: 80%;
+        }
+        .chat-section {
+            background: linear-gradient(to bottom, #ff00ff, #ff00aa);
+            border-radius: 30px;
+            padding: 30px;
+            width: 40%;
+            color: white;
+            position: relative;
+        }
+        .chat-box {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            color: black;
+        }
+        .chat-box img {
+            width: 50px;
+            border-radius: 10px;
+            margin-right: 5px;
+        }
+        .chat-options button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #ff00ff;
+            color: white;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .text-section {
+            padding-left: 50px;
+            width: 60%;
+        }
+        .text-section h2 {
+            color: #6a00aa;
+        }
+        .text-section p {
+            color: gray;
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ddd;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-section">
+            <div class="chat-box">
+                <div class="profile-header">
+                    <img class="profile-pic" src="Screenshot 2025-02-17 035907.png" alt="Samuel Green profile picture">
+                    <h3>Samuel Green</h3>
+                </div>
+                <p>Available to walk</p>
+                <p>That sounds great. I'd be happy with that.</p>
+                <p>Could you send over some pictures of your dog, please?</p>
+                <div>
+                    <img src="Screenshot 2025-02-17 035759.png" alt="Dog 1">
+                    <img src="Screenshot 2025-02-17 035826.png" alt="Dog 2">
+                </div>
+                <p>She looks so happy! How long shall I take her out for?</p>
+                <div class="chat-options">
+                    <button>$29 - 30 min walk</button>
+                    <button>$49 - 1 hour walk</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-section">
+            <h2>Simple booking</h2>
+            <p>Stay in touch with our dog walkers through 
+                the chat interface. This makes it easy to discuss 
+                arrangements and make bookings.</p>
+        </div>
+    </div>
+</body>
+</html>

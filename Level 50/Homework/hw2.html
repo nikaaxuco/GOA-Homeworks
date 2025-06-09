@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .contact-form {
+      background-color: #f1f1f1;
+      padding: 40px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 30px;
+      color: #2e2e4f;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 25px;
+      background-color: white;
+      font-size: 16px;
+      color: #333;
+      box-sizing: border-box;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 120px;
+      border-radius: 25px;
+    }
+
+    .contact-form button {
+      background-color: #927dfc;
+      border: none;
+      padding: 15px 40px;
+      border-radius: 25px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #7a64e3;
+    }
+
+    .contact-form button i {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <form class="contact-form">
+    <h2>SEND US A MESSAGE</h2>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="E-mail" required>
+    <input type="tel" placeholder="Phone" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">
+      ✈ SEND
+    </button>
+  </form>
+</body>
+</html>

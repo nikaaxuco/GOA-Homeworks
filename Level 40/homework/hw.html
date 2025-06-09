@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Summary</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f4fc;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .result {
+            background: linear-gradient(to bottom, #5e5df0, #2927d9);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            width: 200px;
+            border-radius: 15px 0 0 15px;
+        }
+        .result h1 {
+            font-size: 50px;
+            margin: 20px 0;
+        }
+        .result p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .summary {
+            padding: 30px;
+            width: 250px;
+        }
+        .summary h2 {
+            margin-bottom: 20px;
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .reaction { background: #ffe4e4; color: #d9534f; }
+        .memory { background: #fff5d1; color: #f0ad4e; }
+        .verbal { background: #e4f8e4; color: #5cb85c; }
+        .visual { background: #e1eaff; color: #337ab7; }
+        .continue {
+            display: block;
+            width: 100%;
+            background: #2c2c2c;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result">
+            <h4>Your Result</h4>
+            <h1>76</h1>
+            <p>of 100</p>
+            <h3>Great</h3>
+            <p>You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+        <div class="summary">
+            <h2>Summary</h2>
+            <div class="summary-item reaction">
+                <span>Reaction</span> <span>80 / 100</span>
+            </div>
+            <div class="summary-item memory">
+                <span>Memory</span> <span>92 / 100</span>
+            </div>
+            <div class="summary-item verbal">
+                <span>Verbal</span> <span>61 / 100</span>
+            </div>
+            <div class="summary-item visual">
+                <span>Visual</span> <span>73 / 100</span>
+            </div>
+            <a href="#" class="continue">Continue</a>
+        </div>
+    </div>
+</body>
+</html>

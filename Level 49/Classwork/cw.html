@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #333333);
+            min-height: 100vh;
+        }
+        .header {
+            background-color: #000;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .container {
+            display: flex;
+            max-width: 900px;
+            margin: 50px auto;
+            background: linear-gradient(to bottom, #ffffff, #000000);
+            padding: 20px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 8);
+            border-radius: 15px;
+            color: black;
+        }
+        .image-container {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .text-container {
+            flex: 2;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                margin: 20px;
+                padding: 15px;
+            }
+            .image-container {
+                padding-right: 0;
+                padding-bottom: 20px;
+            }
+            .header {
+                font-size: 20px;
+                padding: 15px;
+            }
+            .text-container {
+                flex: 1;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                margin: 10px;
+                padding: 10px;
+            }
+            .header {
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Nika Xucishvili
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="photo.jpg" alt="Profile Image">
+        </div>
+        <div class="text-container">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde deleniti explicabo est ducimus laboriosam expedita ipsam iusto itaque mollitia, quod alias aliquid voluptatem excepturi quisquam ipsum exercitationem velit modi delectus!
+
+
+
+
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <style>
+          .box {
+              width: 100px;
+              height: 100px;
+              background-color: red;
+              position: relative;
+              transition: transform 0.5s ease;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: white;
+              text-align: center;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="box" id="movingBox">აბა დამიჭირე</div>
+
+      <script>
+          let moveCount = 0;
+          const box = document.getElementById('movingBox');
+
+          box.addEventListener('mouseenter', function() {
+              moveCount = (moveCount + 1) % 4;
+            
+              switch(moveCount) {
+                  case 1: // Move right
+                      box.style.transform = 'translateX(200px)';
+                      break;
+                  case 2: // Move down
+                      box.style.transform = 'translateX(200px) translateY(200px)';
+                      break;
+                  case 3: // Move left
+                      box.style.transform = 'translateY(200px)';
+                      break;
+                  case 0: // Move up (back to start)
+                      box.style.transform = 'translate(0, 0)';
+                      break;
+              }
+          });
+      </script>
+  </body>
+  </html>

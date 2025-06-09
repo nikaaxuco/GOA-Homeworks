@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5faff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            width: 350px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+        .header-img {
+            background: #4c00ff;
+            padding: 20px;
+            color: white;
+        }
+        .header-img img {
+            width: 100%;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .content p {
+            color: #666;
+            font-size: 14px;
+        }
+        .plan {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            padding: 10px;
+            background: #f0f4ff;
+            border-radius: 8px;
+        }
+        .plan span {
+            font-weight: bold;
+        }
+        .change {
+            color: #4c00ff;
+            cursor: pointer;
+        }
+        .button {
+            background: #4c00ff;
+            color: white;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 10px auto;
+            width: 80%;
+        }
+        .cancel {
+            color: #999;
+            font-size: 14px;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-img">
+            <h3>&#127925; Music Plan</h3>
+        </div>
+        <div class="content">
+            <h2>Order Summary</h2>
+            <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+            <div class="plan">
+                <span>Annual Plan</span>
+                <span>$59.99/year <span class="change">Change</span></span>
+            </div>
+            <a href="#" class="button">Proceed to Payment</a>
+            <span class="cancel">Cancel Order</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+
+
+.align-example1 {
+    text-align: center; /* ტექსტის ცენტრში განთავსება */
+}
+.align-example2 {
+    text-align: right; /* ტექსტის მარჯვნივ განთავსება */
+}
+.align-example3 {
+    text-align: justify; /* ტექსტის თანაბარი განაწილება */
+}
+
+
+
+.shadow-example1 {
+    text-shadow: 2px 2px 4px #ff0000; /* წითელი ჩრდილი: x=2px, y=2px, blur=4px */
+}
+.shadow-example2 {
+    text-shadow: 0 0 3px #0000ff, 0 0 5px #00ff00; /* ორმაგი ჩრდილი: ლურჯი და მწვანე */
+}
+.shadow-example3 {
+    text-shadow: -2px -2px 0 #000; /* მკვეთრი შავი ჩრდილი უკუღმა მიმართულებით */
+}
+
+
+.border-example1 {
+    -webkit-text-stroke: 2px red; /* ტექსტის წითელი კონტური */
+}
+.border-example2 {
+    border-bottom: 2px solid blue; /* ქვედა ხაზი */
+}
+.border-example3 {
+    border: 1px dashed green; /* დაშორებული მწვანე საზღვარი */
+}
+
+.decoration-example1 {
+    text-decoration: underline wavy red; /* ტალღოვანი წითელი ქვედა ხაზი */
+}
+.decoration-example2 {
+    text-decoration: line-through double blue; /* ორმაგი გადახაზული ლურჯი ხაზი */
+}
+.decoration-example3 {
+    text-decoration: overline dotted green; /* წერტილოვანი მწვანე ზედა ხაზი */
+}

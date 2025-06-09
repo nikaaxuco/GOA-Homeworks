@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transform Examples</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        .scale:hover {
+            transform: scale(1.5);
+        }
+
+        .skew:hover {
+            transform: skew(20deg, 10deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box rotate">Rotate</div>
+    <div class="box scale">Scale</div>
+    <div class="box skew">Skew</div>
+</body>
+</html>

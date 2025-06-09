@@ -1,0 +1,44 @@
+/* styles.css */
+/* ტექსტის განლაგების თვისებები:
+   center - შუაში განლაგება
+   left - მარცხნივ განლაგება
+   right - მარჯვნივ განლაგება
+   justify - ორივე მხარეს გასწორება */
+   .text-align-demo {
+    text-align: center;
+    text-align: left;
+    text-align: right;
+    text-align: justify;
+}
+
+/* ტექსტის დეკორაციის თვისებები:
+   underline - ხაზგასმა
+   line-through - გადახაზვა
+   overline - ზედა ხაზი
+   none - დეკორაციის გარეშე */
+.text-decoration-demo {
+    text-decoration: underline;
+    text-decoration: line-through;
+    text-decoration: overline;
+    text-decoration: none;
+}
+
+/* ტექსტის ჩარჩოს თვისებები:
+   solid - მყარი ჩარჩო
+   dotted - წერტილოვანი ჩარჩო
+   dashed - წყვეტილი ჩარჩო */
+.text-border-demo {
+    border: 2px solid black;
+    border: 2px dotted red;
+    border: 2px dashed blue;
+}
+
+/* ტექსტის ჩრდილის თვისებები:
+   პირველი - ჩვეულებრივი ჩრდილი (x გადაწევა, y გადაწევა, გაბუნდოვნება, ფერი)
+   მეორე - გამჭვირვალე ჩრდილი
+   მესამე - მრავალი ჩრდილი ერთდროულად */
+.text-shadow-demo {
+    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 0 0 3px #FF0000;
+    text-shadow: 2px 2px #FF0000, -2px -2px #0000FF;
+}

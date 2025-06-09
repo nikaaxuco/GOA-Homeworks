@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>პოზიციონირების მაგალითები</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        .section1 {
+            position: static;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section2 {
+            position: relative;
+            top: -20px;
+            left: -20px;
+            background-color: #e0e0e0;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section3 {
+            position: relative;
+            height: 200px;
+            background-color: #d0d0d0;
+            margin-bottom: 20px;
+        }
+
+        .absolute-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .section4 {
+            height: 800px;
+            background-color: #c0c0c0;
+            padding: 20px;
+        }
+
+        .sticky-element {
+            position: sticky;
+            top: 60px;
+            background-color: #fff;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">ვებგვერდის სათაური</h1>
+        <nav>
+            <a href="#section1">სექცია 1</a>
+            <a href="#section2">სექცია 2</a>
+            <a href="#section3">სექცია 3</a>
+            <a href="#section4">სექცია 4</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section id="section1" class="section1">
+            <h2>სტატიკური სექცია</h2>
+            <p>ეს არის სტატიკური პოზიციონირების მაგალითი. ეს არის ნაგულისხმევი პოზიციონირება.</p>
+        </section>
+
+        <section id="section2" class="section2">
+            <h2>რელატიური სექცია</h2>
+            <p>ეს სექცია გადაადგილებულია ზევით და მარცხნივ თავისი ჩვეული პოზიციიდან.</p>
+        </section>
+
+        <section id="section3" class="section3">
+            <div class="absolute-content">
+                <h2>აბსოლუტური პოზიციონირება</h2>
+                <p>ეს ტექსტი მოთავსებულია სექციის ცენტრში.</p>
+            </div>
+        </section>
+
+        <section id="section4" class="section4">
+            <div class="sticky-element">
+                <h2>Sticky ელემენტი</h2>
+                <p>ეს ელემენტი მიყვება სქროლს გარკვეულ წერტილამდე.</p>
+            </div>
+            <p>გრძელი ტექსტი სქროლის ეფექტის საჩვენებლად...</p>
+            <!-- დამატებითი ტექსტი სქროლის ეფექტისთვის -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, voluptatum...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, voluptatum...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, voluptatum...</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>საავტორო უფლებები © 2025 - ყველა უფლება დაცულია</p>
+    </footer>
+</body>
+</html>

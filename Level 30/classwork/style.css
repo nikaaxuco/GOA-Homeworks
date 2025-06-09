@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.card {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.flag {
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
+}

@@ -1,0 +1,78 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Link Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            color: white;
+        }
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .name {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .location {
+            color: #a6ff00;
+            font-size: 14px;
+        }
+        .bio {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .links button {
+            display: block;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .links button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="Screenshot 2025-02-17 034912.png" alt="Profile Picture" class="profile-pic">
+        <div class="name">Jessica Randall</div>
+        <div class="location">London, United Kingdom</div>
+        <div class="bio">"Front-end developer and avid reader."</div>
+        <div class="links">
+            <button>GitHub</button>
+            <button>Frontend Mentor</button>
+            <button>LinkedIn</button>
+            <button>Twitter</button>
+            <button>Instagram</button>
+        </div>
+    </div>
+</body>
+</html>

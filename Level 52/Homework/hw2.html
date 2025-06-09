@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sneaker Product Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #1a1a1a;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      border-bottom: 1px solid #eee;
+    }
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .main {
+      display: flex;
+      padding: 60px;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+    .product-images {
+      flex: 1;
+      max-width: 500px;
+    }
+    .product-images img {
+      width: 100%;
+      border-radius: 16px;
+    }
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .thumbnails img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    .thumbnails img.active {
+      border: 2px solid orange;
+    }
+    .product-details {
+      flex: 1;
+      max-width: 500px;
+    }
+    .product-details h2 {
+      text-transform: uppercase;
+      color: #999;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    .product-details h1 {
+      font-size: 32px;
+      margin: 10px 0;
+    }
+    .product-details p {
+      color: #666;
+      line-height: 1.6;
+    }
+    .price {
+      display: flex;
+      align-items: center;
+      margin: 20px 0 10px;
+      gap: 20px;
+    }
+    .price strong {
+      font-size: 28px;
+    }
+    .discount {
+      background-color: #000;
+      color: white;
+      font-size: 14px;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+    .original-price {
+      color: #aaa;
+      text-decoration: line-through;
+      font-weight: 600;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      background-color: #f7f7f7;
+      border-radius: 10px;
+      padding: 10px 15px;
+      gap: 20px;
+    }
+    .quantity-selector button {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #555;
+    }
+    .add-to-cart {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: orange;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .add-to-cart:hover {
+      background-color: #e68500;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">sneakers</div>
+    <nav>
+      <a href="#">Collections</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="icons">
+      <img src="https://img.icons8.com/material-outlined/24/000000/shopping-cart--v1.png"/>
+      <img src="https://i.pravatar.cc/40" alt="User" style="border-radius: 50%; width: 40px;">
+    </div>
+  </header>
+
+  <section class="main">
+    <div class="product-images">
+      <img src="photo.png" alt="Sneaker Main Image">
+      <div class="thumbnails">
+        <img src="image-product-3.jpg" class="active" alt="Thumb1">
+        <img src="image-product-2.jpg" alt="Thumb3">
+        <img src="image-product-1-thumbnail.jpg" alt="Thumb4">
+      </div>
+    </div>
+
+    <div class="product-details">
+      <h2>Sneaker Company</h2>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+
+      <div class="price">
+        <strong>$125.00</strong>
+        <span class="discount">50%</span>
+      </div>
+      <div class="original-price">$250.00</div>
+
+      <div class="actions">
+        <div class="quantity-selector">
+          <button>-</button>
+          <span>0</span>
+          <button>+</button>
+        </div>
+        <button class="add-to-cart">
+          🛒 Add to cart
+        </button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,29 @@
+    
+    
+    .box1 {
+    width: 200px;
+    height: 200px;
+    background-color: #ff6b6b;
+    border: 3px solid #2d3436;
+    border-radius: 20px;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    }
+
+    .box1:hover {    transform: skew(20deg, 10deg);
+    }
+
+    .box2 {
+    width: 200px;
+    height: 200px;
+    background-color: #a8e6cf;
+    border: 3px solid #2d3436;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    }
+
+    .box2:hover {
+    transform: skew(-20deg, -10deg);
+    }

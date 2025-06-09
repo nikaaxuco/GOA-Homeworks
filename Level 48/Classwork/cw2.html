@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "aside sect1 sect2"
+                "aside sect3 sect3"
+                "aside content content"
+                "footer footer footer";
+            grid-template-columns: 1fr 2fr 2fr;
+            grid-template-rows: 80px 150px 150px 300px 80px;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            grid-area: header;
+            background: lightblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .aside {
+            grid-area: aside;
+            background: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sect1 {
+            grid-area: sect1;
+            background: #add8e6;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sect2 {
+            grid-area: sect2;
+            background: #5f7c8a;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sect3 {
+            grid-area: sect3;
+            background: #6893a7;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content {
+            grid-area: content;
+            background: #7a9fb2;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #4b6b7c;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Header</div>
+    <div class="aside">Aside</div>
+    <div class="sect1">sect1</div>
+    <div class="sect2">sect2</div>
+    <div class="sect3">sect3</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+
+</body>
+</html>
+
