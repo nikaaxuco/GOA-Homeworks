@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Examples</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            margin: 5px;
+            padding: 5px;
+        }
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- innerHTML და innerText-ის ახსნა -->
+    <div class="box">
+        <h3>innerHTML vs innerText განსხვავებები:</h3>
+        <p>innerHTML:</p>
+        <!-- innerHTML აბრუნებს/აყენებს HTML კონტენტს თეგების ჩათვლით -->
+        <div id="innerHTMLExample">
+            Original content with <strong>bold text</strong> and <em>italic text</em>
+        </div>
+        <button onclick="demonstrateInnerHTML()">Show innerHTML</button>
+        
+        <p>innerText:</p>
+        <!-- innerText აბრუნებს/აყენებს მხოლოდ ტექსტურ კონტენტს, HTML თეგების იგნორირებით -->
+        <div id="innerTextExample">
+            Original content with <strong>bold text</strong> and <em>italic text</em>
+        </div>
+        <button onclick="demonstrateInnerText()">Show innerText</button>
+    </div>
+
+    <!-- getElementById მაგალითი -->
+    <div class="box">
+        <h3>getElementById მაგალითი:</h3>
+        <div id="uniqueElement">This is a unique element</div>
+        <button onclick="changeById()">Change Content</button>
+    </div>
+
+    <!-- getElementsByClassName მაგალითი -->
+    <div class="box">
+        <h3>getElementsByClassName მაგალითი:</h3>
+        <div class="highlight">First highlighted element</div>
+        <div class="highlight">Second highlighted element</div>
+        <div class="highlight">Third highlighted element</div>
+        <button onclick="changeByClass()">Change All Highlights</button>
+    </div>
+
+    <!-- getElementsByTagName მაგალითი -->
+    <div class="box">
+        <h3>getElementsByTagName მაგალითი:</h3>
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <button onclick="changeByTag()">Change All Paragraphs</button>
+    </div>
+
+    <script>
+        // innerHTML და innerText-ის დემონსტრაცია
+        function demonstrateInnerHTML() {
+            let element = document.getElementById('innerHTMLExample');
+            alert('innerHTML: ' + element.innerHTML);
+            element.innerHTML = 'Changed with <strong>innerHTML</strong>';
+        }
+
+        function demonstrateInnerText() {
+            let element = document.getElementById('innerTextExample');
+            alert('innerText: ' + element.innerText);
+            element.innerText = 'Changed with innerText <strong>this will show as plain text</strong>';
+        }
+
+        // getElementById მაგალითი
+        function changeById() {
+            let element = document.getElementById('uniqueElement');
+            element.style.color = 'red';
+            element.innerText = 'Content changed using getElementById';
+        }
+
+        // getElementsByClassName მაგალითი
+        function changeByClass() {
+            let elements = document.getElementsByClassName('highlight');
+            for(let element of elements) {
+                element.style.backgroundColor = 'lightgreen';
+                element.innerText = 'Changed using getElementsByClassName';
+            }
+        }
+
+        // getElementsByTagName მაგალითი
+        function changeByTag() {
+            let elements = document.getElementsByTagName('p');
+            for(let element of elements) {
+                element.style.fontStyle = 'italic';
+                element.innerText = 'Changed using getElementsByTagName';
+            }
+        }
+    </script>
+</body>
+</html>

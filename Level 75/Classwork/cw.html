@@ -1,0 +1,37 @@
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>DOM Elements</title>
+          </head>
+          <body>
+                  <h2 id="firstElement">First Element</h2>
+                  <p class="secondElement">Second Element</p>
+                  <div>Third Element</div>
+
+                  <script>
+                      const elementById = document.getElementById("firstElement");
+                      const elementByClass = document.querySelector("secondElement");
+                      const elementByTag = document.querySelector("div");
+
+                      elementById.style.color = "red";
+                      elementById.style.backgroundColor = "#f0f0f0";
+                      elementById.style.fontSize = "28px";
+                      elementById.style.fontStyle = "italic";
+                      elementById.textContent = "First Element";
+
+                      elementByClass.style.color = "blue";
+                      elementByClass.style.backgroundColor = "#e0e0e0";
+                      elementByClass.style.fontSize = "24px";
+                      elementByClass.style.fontWeight = "bold";
+                      elementByClass.textContent = "Second Element";
+
+                      elementByTag.style.color = "green";
+                      elementByTag.style.backgroundColor = "#d0d0d0";
+                      elementByTag.style.fontSize = "20px";
+                      elementByTag.style.textDecoration = "underline";
+                      elementByTag.textContent = "Third Element";
+                  </script>
+          </body>
+          </html>
