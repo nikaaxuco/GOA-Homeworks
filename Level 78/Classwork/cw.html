@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Buttons</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #imageDisplay {
+            margin-top: 30px;
+        }
+        img {
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="showImage(1)">პირველი სურათი</button>
+        <button onclick="showImage(2)">მეორე სურათი</button>
+        <button onclick="showImage(3)">მესამე სურათი</button>
+        <div id="imageDisplay"></div>
+    </div>
+
+    <script>
+        function showImage(imageNumber) {
+            const imageDisplay = document.getElementById('imageDisplay');
+            let imagePath;
+            
+            switch(imageNumber) {
+                case 1:
+                    imagePath = 'https://picsum.photos/400/300?random=1';
+                    break;
+                case 2:
+                    imagePath = 'https://picsum.photos/400/300?random=2';
+                    break;
+                case 3:
+                    imagePath = 'https://picsum.photos/400/300?random=3';
+                    break;
+            }
+            
+            imageDisplay.innerHTML = `<img src="${imagePath}" alt="Image ${imageNumber}">`;
+        }
+    </script>
+</body>
+</html>

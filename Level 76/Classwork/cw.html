@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+
+        window.onload = function() {
+            const imageContainer = document.querySelector('#imageContainer');
+            
+            document.querySelector('#button1').addEventListener('click', function() {
+                imageContainer.innerHTML = '<img src="HTML5_logo_and_wordmark.svg.png" alt="HTML5 Logo" style="width: 300px; height: auto;">';
+            });
+            
+            document.querySelector('#button2').addEventListener('click', function() {
+                imageContainer.innerHTML = '<img src="CSS3_logo_and_wordmark.svg.png" alt="Image 2" style="width: 300px; height: auto;">';
+            });
+            
+            document.querySelector('#button3').addEventListener('click', function() {
+                imageContainer.innerHTML = '<img src="0_6c0myzTJcuOTi_vU.png" alt="Image 3" style="width: 300px; height: auto;">';
+            });
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+
+
+    <button id="button1" style="background-color: #4CAF50; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border: none; border-radius: 4px;">Image 1</button>
+    <button id="button2" style="background-color: #4CAF50; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border: none; border-radius: 4px;">Image 2</button>
+    <button id="button3" style="background-color: #4CAF50; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border: none; border-radius: 4px;">Image 3</button>
+    <div id="imageContainer"></div>
+
+</body>
+
+</html>

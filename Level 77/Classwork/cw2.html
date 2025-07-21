@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Switcher</title>
+
+</head>
+
+<body>
+
+    <img id="myImage" src="image1.jpg" alt="Click to change image" style="cursor: pointer;">
+
+    <script>
+        const image = document.getElementById('myImage');
+        let isFirstImage = true;
+
+        image.addEventListener('click', function() {
+            if (isFirstImage) {
+                image.src = "image2.jpg";
+            } else {
+                image.src = "image1.jpg";
+            }
+            isFirstImage = !isFirstImage;
+        });
+
+
+    </script>
+
+</body>
+
+
+</html>
+
+

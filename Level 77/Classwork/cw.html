@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize Box</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transition: all 0.3s ease;
+        }
+        .large {
+            width: 300px;
+            height: 300px;
+        }
+        .small {
+            width: 100px;
+            height: 100px;
+        }
+        .button-labels {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-labels">
+        <span>Increase Size</span>
+        <span>Decrease Size</span>
+    </div>
+    <button onclick="increaseSize()">+</button>
+    <button onclick="decreaseSize()">-</button>
+    <div id="resizeBox" class="box"></div>
+
+    <script>
+        function increaseSize() {
+            const box = document.getElementById('resizeBox');
+            box.classList.remove('small');
+            box.classList.add('large');
+        }
+
+        function decreaseSize() {
+            const box = document.getElementById('resizeBox');
+            box.classList.remove('large');
+            box.classList.add('small');
+        }
+    </script>
+</body>
+</html>
+

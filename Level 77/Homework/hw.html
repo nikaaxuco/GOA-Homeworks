@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .highlight { background-color: yellow; }
+        .active { background-color: green; }
+        .important { font-weight: bold; }
+        .red { background-color: red; }
+        .blue { background-color: blue; }
+    </style>
+</head>
+<body>
+    <div id="myDiv">This is my div</div>
+
+    <button id="toggleButton">Toggle Active</button>
+    <div id="targetDiv">Target Div</div>
+
+    <p id="checkParagraph" class="important">Important paragraph</p>
+
+    <div id="replaceDiv" class="red">Replace div</div>
+
+    <div id="itemDiv" class="class1 class2 class3">Item div</div>
+
+    <script>
+        document.getElementById("myDiv").classList.add("highlight");
+
+        document.getElementById("myDiv").classList.remove("highlight");
+
+        document.getElementById("toggleButton").addEventListener("click", function() {
+            document.getElementById("targetDiv").classList.toggle("active");
+        });
+
+        const hasParagraphClass = document.getElementById("checkParagraph").classList.contains("important");
+        console.log(hasParagraphClass);
+
+        document.getElementById("replaceDiv").classList.replace("red", "blue");
+
+        const secondClass = document.getElementById("itemDiv").classList.item(1);
+        console.log(secondClass);
+    </script>
+</body>
+</html>
