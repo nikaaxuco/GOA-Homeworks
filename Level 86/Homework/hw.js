@@ -10,7 +10,7 @@ const users = [
 const userWithId3 = users.find(user => user.id === 3);
 console.log("User with ID 3:", userWithId3);
 
-console.log("=== Task 2: Reversing an Array of Colors ===");
+console.log("Task 2: Reversing an Array of Colors");
 
 const colors = ["red", "blue", "green", "yellow", "purple"];
 console.log("Original colors:", [colors]);
@@ -115,7 +115,7 @@ const courseAverages = courses.map(course => {
         averageGrade: Math.round(averageGrade * 100) / 100
     };
 });
-console.log("\n4. Average grades by course:", courseAverages);
+console.log("4. Average grades by course:", courseAverages);
 
 const coursesByEnrollment = [...courses].sort((a, b) => b.students.length - a.students.length);
 console.log("5. Courses sorted by enrollment (descending):");
