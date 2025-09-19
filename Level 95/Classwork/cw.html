@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>fetch</title>
+</head>
+<body>
+  <script>
+ 
+    console.log("ლომიიიიი");
+
+
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log("მოვიტანე რესურსიდან:", json))
+      .catch(err => console.error("შეცდომა:", err));
+
+
+    function vfexvi() {
+      return "ვეფხვი";
+    }
+
+    function lomi() {
+      return "ლომიიიიი";
+    }
+
+
+    console.log(vfexvi());
+    console.log(lomi());
+
+
+    console.log("ბოლო console.log");
+  </script>
+</body>
+</html>
+
+
