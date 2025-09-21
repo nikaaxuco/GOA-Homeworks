@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 def search(text, word):
     if word in text:
         return True
