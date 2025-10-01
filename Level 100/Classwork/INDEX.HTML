@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Counter Step Upgrade</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const { useState } = React;
+
+      function App2() {
+        const [count, setCount] = useState(0);
+        const [step, setStep] = useState(1); // initial step for Increase/Decrease
+
+        const increase = () => setCount(count + step);
+        const decrease = () => setCount(count - step);
+
+        const upgradeStep = () => {
+          setStep(step + 1); // increase the step by 1
+        };
+
+        return (
+          <div>
+            <h1>Count: {count}</h1>
+            <button onClick={increase}>Increase +{step}</button>
+            <button onClick={decrease}>Decrease -{step}</button>
+            <button onClick={upgradeStep}>Upgrade Buttons (+1 each click)</button>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App2 />);
+    </script>
+  </body>
+</html>

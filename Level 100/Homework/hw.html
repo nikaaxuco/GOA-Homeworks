@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>5 Components in One HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .card {
+      border: 1px solid #ccc;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      margin-top: 10px;
+      background: #0077ff;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #0057cc;
+    }
+    .links a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #0077ff;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 5 Components Demo (One HTML)</h1>
+
+
+  <div class="card">
+    <h2>👤 Social Links Profile</h2>
+    <img src="https://via.placeholder.com/100" alt="profile">
+    <h3>John Doe</h3>
+    <p>Frontend Developer</p>
+    <div class="links">
+      <a href="#">GitHub</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <h2>🛒 Product Preview Card</h2>
+    <img src="https://via.placeholder.com/300" alt="perfume">
+    <h3>Gabrielle Essence Eau De Parfum</h3>
+    <p>A floral, solar and voluptuous interpretation composed by Olivier Polge.</p>
+    <strong>$149.99</strong>
+    <br>
+    <a href="#" class="btn">Add to Cart</a>
+  </div>
+
+
+  <div class="card">
+    <h2>🎨 NFT Preview Card</h2>
+    <img src="https://via.placeholder.com/300" alt="nft">
+    <h3>Equilibrium #3429</h3>
+    <p>Our Equilibrium collection promotes balance and calm.</p>
+    <p>💎 0.041 ETH | ⏳ 3 days left</p>
+    <p>👤 Creation of Jules Wyvern</p>
+  </div>
+
+
+  <div class="card">
+    <h2>📦 Order Summary</h2>
+    <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+    <p><b>Annual Plan</b> $59.99/year</p>
+    <a href="#" class="btn">Proceed to Payment</a>
+    <p style="color:red; margin-top:10px;">Cancel Order</p>
+  </div>
+
+
+  <div class="card">
+    <h2>⭐ Extra Component</h2>
+    <p>This is just an extra simple card as the 5th component.</p>
+  </div>
+
+</body>
+</html>

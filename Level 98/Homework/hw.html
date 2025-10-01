@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მანქანების სამყარო</title>
+    <style>
+        
+        :root {
+            --primary: #1b4d89;
+            --secondary: #fca311;
+            --background: #f5f9ff;
+            --text-dark: #1b1b1b;
+            --text-light: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Fira Sans", Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), #0f2e56);
+            color: var(--text-light);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.75rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.15rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        section {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 16px 35px rgba(12, 55, 125, 0.08);
+            margin-bottom: 2rem;
+            padding: 2rem;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background-color: var(--background);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(12, 55, 125, 0.15);
+        }
+
+        .feature-card h3 {
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--secondary);
+            margin-top: 1.5rem;
+        }
+
+        .timeline-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-item span {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--text-light);
+            padding: 0.4rem 0.75rem;
+            border-radius: 999px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .car-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .car-types article {
+            border: 1px solid rgba(27, 77, 137, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            background-color: #fbfdff;
+        }
+
+        .car-types h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            margin: 0.75rem 0 0 1.25rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #0f2e56;
+            color: var(--text-light);
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 640px) {
+            header {
+                padding: 2.5rem 1rem;
+            }
+
+            header h1 {
+                font-size: 2.25rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>მანქანების საოცარი სამყარო</h1>
+        <p>ვნახოთ, როგორ განვითარდა ავტომობილები, რა ტიპები არსებობს და როგორ აირჩიოთ სწორი მანქანა თქვენი ცხოვრების სტილისთვის.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>ავტომობილების მოკლე ისტორია</h2>
+            <p>თანამედროვე მანქანების ისტორია იწყება XIX საუკუნის ბოლოს, როდესაც ინჟინრებმა პროდუქტიულად გამოიყენეს შიდა წვის ძრავა. ამის შემდეგ ტექნოლოგიები მკვეთრად განვითარდა, გაჩნდა ახალი საწვავის ტიპები, უსაფრთხოების სისტემები და ინტელექტუალური ფუნქციები.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span>1886</span>
+                    <p>კარლ ბენცმა შექმნა პირველი პატენტირებული ავტომობილი, რომელიც ბენზინის ძრავით მუშაობდა.</p>
+                </div>
+                <div class="timeline-item">
+                    <span>1908</span>
+                    <p>ჰენრი ფორდმა გამოუშვა Model T და წარმოებაში დანერგა კონვეიერი, რაც მანქანებს ხელმისაწვდომს ხდიდა.</p>
+                </div>
+                <div class="timeline-item">
+                    <span>1960-ები</span>
+                    <p>გარდა კომფორტისა და დიზაინისა, ყურადღება მიექცა უსაფრთხოების სისტემებს, როგორიცაა უსაფრთხოების ქამრები.</p>
+                </div>
+                <div class="timeline-item">
+                    <span>XXI საუკუნე</span>
+                    <p>ელექტრომობილები, ჰიბრიდები და ავტონომიური მართვის ტექნოლოგიები გახდა თანამედროვე ტრენდები.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>მთავარი უპირატესობები</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>მობილურობა</h3>
+                    <p>მანქანა გაძლევთ თავისუფლებას იმოგზაუროთ, იმუშავოთ და შეისწავლოთ ახალი ადგილები თქვენი აუცილებლობებიდან გამომდინარე.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>უსაფრთხოება</h3>
+                    <p>თანამედროვე ავტომობილები აღჭურვილია ადაპტაციური სისტემებით: ავტოდაფიქრებით, შტატგადაჭარბების კონტროლით და ავარიული დამუხრუჭებით.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>ეკონომიურობა</h3>
+                    <p>ჰიბრიდული და ელექტრო მანქანები ამცირებენ საწვავის ხარჯვას და ეხმარებიან გარემოს დაცვაში.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>კომფორტი</h3>
+                    <p>კონტროლი კლიმატზე, მულტიმედიური სისტემები და კომფორტული სალონი ქმნის სასიამოვნო მგზავრობის გამოცდილებას.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>მანქანების ტიპები</h2>
+            <p>სწორი მანქანის შერჩევისას მნიშვნელოვანია გაითვალისწინოთ, რას ელით ტრანსპორტისგან. ქვემოთ მოცემულია რამდენიმე პოპულარული კატეგორია:</p>
+            <div class="car-types">
+                <article>
+                    <h3>ქალაქური ჰეჩბეკი</h3>
+                    <p>კომპაქტური ზომები და დაბალი საწვავის მოხმარება. იდეალურია ქალაქისთვის და ყოველდღიური მგზავრობისთვის.</p>
+                    <ul>
+                        <li>მარტივი პარკირება</li>
+                        <li>ეკონომიური საწვავის ხარჯი</li>
+                        <li>კომპაქტური დიზაინი</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>სედანი</h3>
+                    <p>კომფორტული სალონი და ბარგის დიდი ადგილი. ხშირად გამოიყენება ოჯახური მგზავრობისთვის.</p>
+                    <ul>
+                        <li>კომფორტული სავარძლები</li>
+                        <li>უსაფრთხოების თანამედროვე სისტემები</li>
+                        <li>სასურველი არჩევანი გრძელ გზებზე</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>ჯიპი / SUV</h3>
+                    <p>მაღალი კლირენსი და დიდი სივრცე. შესაფერისი რთული გზებისა და ექსტრემალური პირობებისთვის.</p>
+                    <ul>
+                        <li>ყველა ამძრავის ვარიანტები</li>
+                        <li>წონისა და ზომის მიუხედავად სტაბილური მართვა</li>
+                        <li>მრავალფუნქციური სალონი</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>ელექტრომობილი</h3>
+                    <p>ძრავი მხოლოდ ელექტრო ენერგიაზე მუშაობს. ავრცელებს ნულოვანი ემისიებს და წარმოგიდგენთ თანამედროვე ტექნოლოგიებს.</p>
+                    <ul>
+                        <li>სავალდებულო სწრაფი დამუხტვა</li>
+                        <li>დაბალი მომსახურების ხარჯი</li>
+                        <li>ინოვაციური მართვის სისტემები</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>როგორ ავირჩიოთ სასურველი მანქანა?</h2>
+            <p>მანქანის შერჩევა დამოკიდებულია თქვენს მიზნებზე, ბიუჯეტზე და ცხოვრების სტილზე. ქვემოთ მოცემულია რამდენიმე რჩევა, რომელიც გეხმარებათ სწორი გადაწყვეტილების მიღებაში.</p>
+            <ol>
+                <li>დადგინეთ, რა მიზნისთვის გჭირდებათ მანქანა: ქალაქური მგზავრობა, გრძელი მოგზაურობა თუ ოფროადი.</li>
+                <li>შეადარეთ საწვავის მოხმარება და მოვლის ხარჯები სხვადასხვა მოდელებში.</li>
+                <li>გაითვალისწინეთ უსაფრთხოების რეიტინგები და დამატებითი სისტემები.</li>
+                <li>ჩაატარეთ ტესტ-დრაივი, რათა შეიგრძნოთ მანქანის მართვა და კომფორტი.</li>
+                <li>იპოვეთ სანდო დილერი ან პლატფორმა, სადაც შესაძლებელია გარანტირებული შეძენა.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 მანქანების ენციკლოპედია</p>
+        <p>შექმნილია სიყვარულით მანქანებისა და ინოვაციების მიმართ.</p>
+    </footer>
+</body>
+</html>

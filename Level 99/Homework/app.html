@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level 99 Homework</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f3f4f6;
+        color: #1f2937;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 720px;
+        margin: 2rem auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+      }
+
+      h2 {
+        margin-top: 0;
+        color: #2563eb;
+        text-align: center;
+      }
+
+      section + section {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid #e5e7eb;
+      }
+
+      .image-preview {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      img.task-image {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(15, 23, 42, 0.15);
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        max-width: 360px;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        gap: 0.5rem;
+      }
+
+      input {
+        padding: 0.5rem 0.75rem;
+        border-radius: 8px;
+        border: 1px solid #cbd5f5;
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 0.6rem 1rem;
+        border-radius: 8px;
+        border: none;
+        background-color: #2563eb;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      button:disabled {
+        background-color: #9ca3af;
+        cursor: not-allowed;
+      }
+
+      button:not(:disabled):hover {
+        background-color: #1d4ed8;
+      }
+
+      .difference-output {
+        margin-top: 0.75rem;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #059669;
+      }
+
+      .time-output {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        border-radius: 999px;
+        background-color: #eff6ff;
+        color: #1d4ed8;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+
+      function App() {
+
+        const greeting = "Welcome to React!";
+
+
+        const imagePath = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMuRviGmuOIjiaBd9elsOJ9lthIA9hKV6JGQ&s";
+
+
+        const [userInput, setUserInput] = useState("");
+
+
+        const [differenceResult, setDifferenceResult] = useState(null);
+
+        const [currentTime, setCurrentTime] = useState(new Date());
+
+        const handleFormSubmit = (event) => {
+          event.preventDefault();
+          console.log(`Submitted input: ${userInput}`);
+          setUserInput("");
+        };
+
+        const calculateDifference = (minuend, subtrahend) => {
+          const difference = minuend - subtrahend;
+          console.log(`Difference (${minuend} - ${subtrahend}) = ${difference}`);
+          setDifferenceResult(difference);
+        };
+
+        useEffect(() => {
+          const intervalId = setInterval(() => {
+            const now = new Date();
+            setCurrentTime(now);
+
+            const formattedTime = now
+              .toLocaleTimeString("en-GB", {
+                hour12: false,
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+              })
+              .replace(/\./g, ":");
+
+            console.log(`Current time: ${formattedTime}`);
+          }, 1000);
+
+          return () => clearInterval(intervalId);
+        }, []);
+
+        const formattedTime = currentTime
+          .toLocaleTimeString("en-GB", {
+            hour12: false,
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+          })
+          .replace(/\./g, ":");
+
+        return (
+          <div className="container">
+            <h2>{greeting}</h2>
+
+            <section>
+              <h3>Task 2: Image Rendering with Specific Dimensions</h3>
+              <p>
+                The image below is resized to 300px by 200px using inline styles. Replace the
+                file inside the <code>assets</code> folder if you prefer a different picture.
+              </p>
+              <div className="image-preview">
+                <img
+                  className="task-image"
+                  src={imagePath}
+                  alt="Scenic mountain"
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+
+            <section>
+              <h3>Task 3: Button Validation</h3>
+              <p>
+                Fill the input field to enable the submit button. Once submitted, the value is logged to
+                the console and the field resets.
+              </p>
+              <form onSubmit={handleFormSubmit}>
+                <label>
+                  Enter your name
+                  <input
+                    type="text"
+                    placeholder="e.g. Ana"
+                    value={userInput}
+                    onChange={(event) => setUserInput(event.target.value)}
+                  />
+                </label>
+                <button type="submit" disabled={!userInput.trim()}>
+                  Log to Console
+                </button>
+              </form>
+            </section>
+
+            <section>
+              <h3>Task 4: Difference Function</h3>
+              <p>
+                Clicking the button calculates the difference between two numbers, shows it below, and logs
+                the result to the console.
+              </p>
+              <button onClick={() => calculateDifference(25, 9)}>
+                Calculate 25 - 9
+              </button>
+              {differenceResult !== null && (
+                <p className="difference-output">Difference result: {differenceResult}</p>
+              )}
+            </section>
+
+            <section>
+              <h3>Task 5: Time Logger</h3>
+              <p>
+                The current time updates every second. Open the browser console to see the formatted time logs.
+              </p>
+              <div className="time-output">Current time: {formattedTime}</div>
+            </section>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
